@@ -1,0 +1,146 @@
+/* Class: CMSC203 CRN 46519
+ Program: Assignment #1
+ Instructor: Farnaz Eivazi
+ Summary of Description: Build an application that will step through some possible problems
+ to restore internet connectivity.  Assume that your computer uses wi-fi to connect to a router
+  which connects to an Internet Service Provider (ISP) which connects to the Internet.
+ Due Date: 06/21/2022 
+ * Platform/compiler:Eclipse
+ * I pledge that I have completed the programming assignment independently.
+   I have not copied the code from a student or any source.
+   I have not given my code to any student.
+   Print your Name here: Bryan Orozco
+*/
+
+
+
+import java.util.Scanner;
+
+
+public class WiFiDiagnosis {
+
+	public static void main(String[] args) {
+		
+		
+		
+		Scanner input = new Scanner(System.in);		//create new scanner class
+		String answer,								//create variable for user input
+			   positive = "Yes",
+			   negative = "No";
+		
+		System.out.println("If you have a problem with internet connectivity, this WiFi "
+				+ "Diagnosis might work.");
+		System.out.println();	//Adds line space
+		//First Solution and question:
+		
+		System.out.println("First step: reboot the computer"); //first question
+		System.out.println("Are you able to connect with the internet? (yes or no)");
+		
+		answer = input.nextLine();		//reads user input						
+		
+		//Validation statement. While loop will ensure user only inputs yes or no
+		
+		while (!answer.equalsIgnoreCase(positive) && !answer.equalsIgnoreCase(negative))	{
+			System.out.println("Please enter yes or no: ");
+			answer = input.nextLine();
+		}
+			
+		//Checks whether we are continuing the program or ending it
+		
+		if	( answer.equalsIgnoreCase(positive)) {
+			
+			System.out.println("Rebooting your computer seemed to work");
+			System.out.println("");
+			System.out.println("Programmer:");
+			System.out.println("Bryan Orozco");
+		}
+		else	{
+			//Second Solution and question:
+		
+			System.out.println("Second step: reboot your router"); //second question
+			System.out.println("Now are you able to connect with the internet? (yes or no)");
+		
+			answer = input.nextLine();		//reads user input						
+		
+			//Validation statement. While loop will ensure user only inputs yes or no
+		
+			while (!answer.equalsIgnoreCase(positive) && !answer.equalsIgnoreCase(negative))	{
+			System.out.println("Please enter yes or no: ");
+			answer = input.nextLine();
+			}
+			
+			//Checks whether we are continuing the program or ending it
+		
+			if	( answer.equalsIgnoreCase(positive)) {
+			
+				System.out.println("Rebooting your router seemed to work");
+				System.out.println("");
+				System.out.println("Programmer:");
+				System.out.println("Bryan Orozco");
+			}
+			
+			else	{
+				//Third Solution and question:
+		
+				System.out.println("Third step: make sure the cables to your router are "
+						+ " plugged in firmly and your router is getting power"); //Third question
+				System.out.println("Now are you able to connect with the internet? (yes or no)");
+		
+				answer = input.nextLine();		//reads user input						
+		
+				//Validation statement. While loop will ensure user only inputs yes or no
+		
+				while (!answer.equalsIgnoreCase(positive) && !answer.equalsIgnoreCase(negative))	{
+					System.out.println("Now are you able to connect "
+							+ "with the internet? (yes or no)\r\n"
+							+ "");
+					answer = input.nextLine();
+				}
+			
+				//Checks whether we are continuing the program or ending it
+		
+				if	( answer.equalsIgnoreCase(positive)) {
+			
+					System.out.println("Checking the router's cables seemed to work");
+					System.out.println("");
+					System.out.println("Programmer:");
+					System.out.println("Bryan Orozco");
+				}
+				else	{
+					//Fourth Solution and question:
+		
+					System.out.println("Fourth step: move your computer closer to your router"); //fourth question
+					System.out.println("Now are you able to connect with the internet? (yes or no)");
+		
+					answer = input.nextLine();		//reads user input						
+		
+					//Validation statement. While loop will ensure user only inputs yes or no
+		
+					while (!answer.equalsIgnoreCase(positive) && !answer.equalsIgnoreCase(negative))	{
+						System.out.println("Please enter yes or no: ");
+						answer = input.nextLine();
+					}
+			
+					//Checks whether we are continuing the program or ending it
+		
+					if	( answer.equalsIgnoreCase(positive)) {
+			
+						System.out.println("Moving your computer seemed to work");
+						System.out.println("");
+						System.out.println("Programmer:");
+						System.out.println("Bryan Orozco");
+					}
+					
+					else	{
+		
+						System.out.println("Fifth step: contact your ISP\r\n"
+								+ "Make sure your ISP is hooked up to your router.\f");
+						System.out.println("Done!");
+						System.out.println("Programmer:");
+						System.out.println("Bryan Orozco");
+					}
+				}
+		}
+	}
+	}
+}
